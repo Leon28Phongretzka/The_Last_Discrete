@@ -1,19 +1,16 @@
-// Write Pseudo code for Prim algorithm
-// Input: G = (V, E) is a connected undirected graph with n vertices and m edges with weight
-// Output: A minimum spanning tree T of G and the total weight of T
-//
-Prim(G)
-    VH = {v0}                   // v0 is the first vertex in V
-    V = V\{v0}                  // Remove v0 from V
-    T = ∅                       // T is the set of edges in the minimum spanning tree
-    d(H) = 0;                   // d(H) is the total weight of T
-    while(V != ∅)
-        e = ExtractMin(E)       // e = (u, v) with u in VH and v in V
-        T = T ∪ {e}             // Add e to T
-        d(H) = d(H) + w(e)      // Update d(H)
-        V = V\{v}               // Remove v from V
-        VH = VH ∪ {v}           // Add v to VH
-    return (T, d(H));
+function Dijkstra(Graph, u)                     // Input includes Graph and source is vertex u
+// The solution use pritioty queue 
+// Set the distance from source to any vertices in the graph
+    for each v in Graph.Vertices                // Initialize all vertices
+        dist[v] = infinity                      // to be unvisited
+        parent[v] = null                        // and have no parent
+        add v to Q                              // Add all vertices to Q, with Q is a priority queue
+        u.distance = 0                          // Distance from source to source is 0
+// If any vertices hasn't distance from source to this, find this distance
+    while Q is not empty                        // While Q is not empty
+        u = vertex in Q with min dist[u]        // Get the vertex has the minimum distance with u in Queue
+        remove u from Q                         // Remove u from Q
+        for each v in Adj_list[u]               // For each neighbor v of u
+            dist[v]=weight(u,v)                 // distance to v is weight of u to v
+    return dist, parent                         // Return the distance and parent of each vertex
 
-
-    
