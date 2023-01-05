@@ -1,0 +1,1 @@
+{"name":"Local: BFS_tuto_undirected","url":"d:\\4.Code\\Thuat_toan_on_thi\\BFS_tuto_undirected.cpp","tests":[{"id":1672559348411,"input":"9 9\n1 2\n1 3\n1 5\n2 4\n3 6\n3 7\n3 9\n5 8\n8 9\n1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\4.Code\\Thuat_toan_on_thi\\BFS_tuto_undirected.cpp","group":"local","local":true}
